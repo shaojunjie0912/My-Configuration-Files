@@ -1,10 +1,16 @@
 return {
 	"Civitasv/cmake-tools.nvim",
+	dependencies = {
+		{ "akinsho/toggleterm.nvim", version = "*", config = true },
+		"stevearc/overseer.nvim",
+	},
 	config = function()
+		require("toggleterm").setup()
+		require("overseer").setup()
 		require("cmake-tools").setup({
 			cmake_command = "cmake", -- this is used to specify cmake command path
 			ctest_command = "ctest", -- this is used to specify ctest command path
-			cmake_regenerate_on_save = true, -- auto generate when save CMakeLists.txt
+			cmake_regenerate_on_save = false, -- auto generate when save CMakeLists.txt
 			cmake_generate_options = {
 				"-DCMAKE_C_COMPILER=/usr/bin/clang",
 				"-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
