@@ -1,0 +1,17 @@
+[user]
+	name = shaojunjie0912
+	email = shaojunjie0912@outlook.com
+[alias]
+	ad=add .
+	cmm=commit -m
+	lg=log
+	rlg=reflog
+	co=checkout
+	cob=checkout -b
+	cod=checkout develop
+	com=checkout master
+	fc=fetch
+	cm=commit
+	st=status
+	pl=pull
+	ps=push
