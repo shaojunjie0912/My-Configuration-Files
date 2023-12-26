@@ -54,5 +54,7 @@ zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
 
+# My Modules
 zmodule romkatv/powerlevel10k
 zmodule MichaelAquilina/zsh-autoswitch-virtualenv --source autoswitch_virtualenv.plugin.zsh
+zmodule agkozak/zsh-z
