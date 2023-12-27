@@ -23,6 +23,7 @@ return {
 			pyright = {},
 			clangd = {},
 			cmake = {},
+			marksman = {},
 		}
 
 		local on_attach = function(_, bufnr)
