@@ -115,5 +115,30 @@ return {
 		dap.listeners.before.event_exited["dapui_config"] = function()
 			dapui.close()
 		end
+
+		-- codelldb difinition & configuration
+		dap.adapters.codelldb = {
+			type = "server",
+			port = "${port}",
+			executable = {
+				command = "/home/olioolii/.tools/codelldb/extension/adapter/codelldb",
+				args = { "--port", "${port}" },
+			},
+		}
+
+		dap.configurations.cpp = {
+			{
+				name = "Launch file",
+				type = "codelldb",
+				request = "launch",
+				program = function()
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+				end,
+				cwd = "${workspaceFolder}",
+				stopOnEntry = false,
+			},
+		}
+
+		dap.configurations.c = dap.configurations.cpp -- C <-> CPP
 	end,
 }

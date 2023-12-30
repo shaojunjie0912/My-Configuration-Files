@@ -7,15 +7,6 @@ return {
 		},
 	},
 	{
-		"folke/persistence.nvim",
-		keys = {
-			{ "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]] },
-			{ "<leader>ql", [[<cmd>lua require("persistence").load({ last = true})<cr>]] },
-			{ "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]] },
-		},
-		config = true,
-	},
-	{
 		"windwp/nvim-autopairs",
 		event = "VeryLazy",
 		opts = {
@@ -73,13 +64,6 @@ return {
 		config = true,
 	},
 	{
-		"kamykn/spelunker.vim",
-		event = "VeryLazy",
-		config = function()
-			vim.g.spelunker_check_type = 2
-		end,
-	},
-	{
 		"ellisonleao/glow.nvim",
 		event = "VeryLazy",
 		config = true,
@@ -87,6 +71,7 @@ return {
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -95,16 +80,6 @@ return {
 		keys = {
 			{ "<leader>e", "<cmd>Neotree toggle<CR>", desc = "Open the neo-tree", mode = { "n", "v" } },
 		},
-		config = true,
-	},
-	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		config = true,
-	},
-	{
-		"echasnovski/mini.ai",
-		event = "VeryLazy",
 		config = true,
 	},
 	{
