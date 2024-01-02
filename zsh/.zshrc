@@ -5,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# -----------------
+# Nvm Init
+# -----------------
+source /usr/share/nvm/init-nvm.sh
+
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -144,11 +149,6 @@ unset key
 # zsh-autoswitch-virtualenv configuration
 # ---------------------------------------
 
-# default virtual environment
-# export AUTOSWITCH_DEFAULTENV="venv"
-
-# virtual environments to be stored in each project directory
-export AUTOSWITCH_VIRTUAL_ENV_DIR=".virtualenv"
 
 
 # alias
