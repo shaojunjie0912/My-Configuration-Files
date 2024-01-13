@@ -154,5 +154,5 @@ unset key
 # alias
 alias vim="nvim"
 alias t="tmux"
-alias python="python3"
+alias py="python3"
 alias s="neofetch | lolcat"
